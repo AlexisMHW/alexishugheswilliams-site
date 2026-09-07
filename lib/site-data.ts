@@ -37,7 +37,7 @@ export const pressAppearances = [
   },
   {
     outlet: "Panel appearance",
-    context: "Speaking on a panel at a Nashville entrepreneurship event.",
+    context: "Alexis speaking on a panel.",
     image: "/images/press/panel-speaking.jpg",
   },
 ];
@@ -67,7 +67,7 @@ export const ventures = [
     description:
       "Evidence of Alexis's community leadership and advocacy \u2014 helping people be seen, supported, and given opportunities to grow.",
     relationship: "Founder / community leader.",
-    href: "https://www.girlunknown.org", // TEMP: verify reachable before launch; see notes
+    href: "/my-work#girl-unknown",
     href_is_temporary: true,
     image: "/images/girl-unknown/logo-mark.png",
   },
@@ -84,10 +84,32 @@ export const ventures = [
     name: "Cozy Home Services Inc.",
     tagline: "Beautiful spaces. Stronger tomorrows.",
     description:
-      "A home-services company serving real clients with real completed work.",
-    relationship: "Co-owned with her husband, Robert Calhoun Sr.",
+      "A Nashville home-services company bringing construction, function, color, design, and decor together so a house feels like home.",
+    relationship:
+      "Alexis co-owns Cozy Home Services Inc. with her husband, Robert Calhoun Sr.",
     href: "https://www.yourcozyhome.co",
     image: "/images/cozy-home/logo.png",
+  },
+];
+
+export const editorialNotes = [
+  {
+    category: "Building It",
+    title: "What hospitality taught me about building software",
+    excerpt:
+      "Years of feeding people taught me that the visible moment is only the finish line. The real work lives in everything that happens before guests arrive — which is exactly where Place & Plenty begins.",
+  },
+  {
+    category: "Around the Table",
+    title: "Same heart. A larger table.",
+    excerpt:
+      "Something Sweet created moments of care through food. Place & Plenty extends that same instinct into the entire experience of preparing to welcome people.",
+  },
+  {
+    category: "At Home",
+    title: "Why real homes matter more than perfect ones",
+    excerpt:
+      "The point was never a flawless room or a performance of hosting. The point is making room for people, preparing with care, and being present when they arrive.",
   },
 ];
 
