@@ -25,8 +25,8 @@ export default function Press() {
             Stories that highlight the work.
           </h1>
           <p className="mt-4 font-sans text-lg text-espresso/80">
-            A few of the places Alexis and Something Sweet LLC have shown up
-            over the years.
+            A selected visual archive of Alexis and Something Sweet LLC in
+            Nashville media and community conversations.
           </p>
         </section>
 
@@ -48,6 +48,9 @@ export default function Press() {
                   />
                 </div>
                 <div className="flex flex-1 flex-col justify-center p-6">
+                  <p className="font-sans text-xs uppercase tracking-[0.16em] text-gold">
+                    From the archive
+                  </p>
                   <h2 className="font-serif text-2xl text-forest">{item.outlet}</h2>
                   <p className="mt-2 font-sans text-espresso/80">{item.context}</p>
                 </div>
