@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { editorialNotes } from "@/lib/site-data";
 
 export const metadata: Metadata = {
   title: "Life with Lexi | Alexis Hughes-Williams",
@@ -139,6 +140,28 @@ export default function LifeWithLexi() {
           </p>
         </section>
 
+        <section className="border-t border-espresso/10 bg-forest px-6 py-16 text-cream">
+          <div className="mx-auto max-w-6xl">
+            <p className="font-script text-3xl text-gold">Notes from my life</p>
+            <h2 className="mt-2 max-w-2xl font-serif text-3xl md:text-4xl">
+              The thinking behind the things I build.
+            </h2>
+            <div className="mt-10 grid gap-8 md:grid-cols-3">
+              {editorialNotes.map((note) => (
+                <article key={note.title} className="border-t border-gold/70 pt-5">
+                  <p className="font-sans text-xs uppercase tracking-[0.16em] text-gold">
+                    {note.category}
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl">{note.title}</h3>
+                  <p className="mt-4 font-sans leading-relaxed text-cream/75">
+                    {note.excerpt}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Pillars */}
         {pillars.map((pillar, i) => (
           <section
@@ -174,9 +197,8 @@ export default function LifeWithLexi() {
         {/* Closing note */}
         <section className="border-t border-espresso/10 bg-forest px-6 py-16 text-center text-cream">
           <p className="mx-auto max-w-2xl font-serif text-2xl italic text-gold">
-            More writing is on its way — building Place &amp; Plenty, lessons
-            from Something Sweet, and why real homes matter more than perfect
-            ones.
+            A fuller life is not a perfectly arranged one. It is a life with
+            room for people, purpose, work, rest, and the stories still being written.
           </p>
         </section>
       </main>
