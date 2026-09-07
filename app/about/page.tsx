@@ -43,6 +43,33 @@ export default function About() {
           </div>
         </section>
 
+        <section className="border-t border-espresso/10 px-6 py-16">
+          <div className="mx-auto max-w-4xl">
+            <p className="font-sans text-sm uppercase tracking-[0.18em] text-gold">
+              Built over time
+            </p>
+            <h2 className="mt-2 font-serif text-3xl text-forest">
+              Experience that keeps taking a new form.
+            </h2>
+            <div className="mt-8 grid gap-x-10 gap-y-8 border-l border-gold/50 pl-6 md:grid-cols-2 md:border-l-0 md:pl-0">
+              {[
+                ["Marketing & nonprofit leadership", "More than twenty years learning how to pair good intentions with clear plans, communication, and follow-through."],
+                ["Something Sweet LLC", "Hospitality became a business — and care became something people could taste, share, and remember."],
+                ["Girl, unKnown / OUR, unKnown Inc.", "Community leadership widened the work toward identity, opportunity, and helping people be seen."],
+                ["AR Squared & Cozy Home Services", "The portfolio grew to include company-building, stewardship, construction, color, design, and the feeling of home."],
+                ["Place & Plenty", "Years of hosting became a consumer platform for everything between “people are coming” and the doorbell ringing."],
+                ["Life with Lexi", "The personal thread: home, family, hospitality, building, and the perspective behind it all."],
+              ].map(([title, description], index) => (
+                <article key={title} className="relative border-t border-espresso/10 pt-4">
+                  <span className="font-serif text-sm text-gold">0{index + 1}</span>
+                  <h3 className="mt-2 font-serif text-xl text-forest">{title}</h3>
+                  <p className="mt-2 font-sans leading-relaxed text-espresso/75">{description}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Roots */}
         <section className="border-t border-espresso/10 bg-ivory px-6 py-16">
           <div className="mx-auto max-w-2xl">
