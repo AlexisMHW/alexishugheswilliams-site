@@ -1,21 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ventures, lifeWithLexiPillars, pressItems } from "@/lib/site-data";
+import { editorialNotes, ventures, pressItems } from "@/lib/site-data";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import { LaptopPhoneMockup } from "@/components/LaptopPhoneMockup";
-
-
-function AssetPending({ label }: { label: string }) {
-  return (
-    <div className="flex h-full min-h-[220px] w-full flex-col items-center justify-center gap-1 border border-dashed border-espresso/25 bg-ivory px-4 text-center">
-      <span className="font-sans text-xs uppercase tracking-wide text-espresso/50">
-        Asset pending
-      </span>
-      <span className="font-sans text-sm text-espresso/70">{label}</span>
-    </div>
-  );
-}
 
 export default function Home() {
   return (
@@ -23,7 +11,7 @@ export default function Home() {
       <SiteHeader />
 
       <main>
-        <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-2 md:items-center md:py-24">
+        <section className="paper-texture mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[1.05fr_.95fr] md:items-center md:py-24">
           <div>
             <p className="mb-4 font-sans text-sm text-gold">
               People &middot; Hospitality &middot; Opportunity
@@ -52,7 +40,7 @@ export default function Home() {
           </div>
           <div className="relative aspect-[4/5] w-full overflow-hidden">
             <Image
-              src="/images/life-with-lexi/at-home.jpg"
+              src="/images/founder/emerald-founder-portrait.jpg"
               alt="Alexis Hughes-Williams"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
@@ -62,15 +50,20 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t border-espresso/10 bg-ivory px-6 py-16 text-center">
-          <div className="mx-auto max-w-2xl">
+        <section className="border-t border-espresso/10 bg-ivory px-6 py-16">
+          <div className="editorial-rule mx-auto max-w-3xl">
             <h2 className="font-serif text-3xl text-forest">
               More than one title. One connected body of work.
             </h2>
-            <p className="mt-4 font-sans text-espresso/80">
-              Across business, family, and community, Alexis creates spaces,
-              experiences, and opportunities that bring people together. What
-              drives the work has never changed &mdash; people.
+            <p className="mt-5 font-serif text-xl leading-relaxed text-espresso/85 md:text-2xl">
+              I&apos;ve spent more than twenty years building programs, brands,
+              businesses, and experiences around people.
+            </p>
+            <p className="mt-4 max-w-2xl font-sans leading-relaxed text-espresso/75">
+              Sometimes that has looked like community work. Sometimes it has
+              looked like a box of cookies, a house made cozier, or software
+              built to help someone welcome people well. The form changes. The
+              instinct does not.
             </p>
           </div>
         </section>
@@ -110,7 +103,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl text-forest">Something Sweet LLC</h3>
+                  <h3 className="font-serif text-xl text-forest">
+                    <a href="https://www.somethingsweetllc.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                      Something Sweet LLC
+                    </a>
+                  </h3>
                   <p className="mt-1 font-sans text-sm text-gold">
                     The beginning of the hospitality story.
                   </p>
@@ -140,7 +137,14 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6 pt-0">
-                  <h3 className="font-serif text-xl text-forest">Place & Plenty</h3>
+                  <p className="mb-3 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-gold">
+                    What I&apos;m building now
+                  </p>
+                  <h3 className="font-serif text-xl text-forest">
+                    <a href="https://placeandplenty.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                      Place &amp; Plenty
+                    </a>
+                  </h3>
                   <p className="mt-1 font-sans text-sm text-gold">
                     Hospitality, thoughtfully reimagined.
                   </p>
@@ -170,33 +174,38 @@ export default function Home() {
         <section className="border-t border-espresso/10 px-6 py-16">
           <div className="mx-auto max-w-6xl">
             <p className="font-sans text-sm text-gold">Selected work</p>
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
-              {ventures.map((v) => (
+            <h2 className="mt-2 max-w-2xl font-serif text-3xl text-forest">
+              Community, stewardship, and home.
+            </h2>
+            <p className="mt-3 max-w-2xl font-sans text-espresso/75">
+              The wider portfolio reflects other parts of the same commitment:
+              helping people feel seen, supported, and at home.
+            </p>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {ventures.slice(2).map((v) => (
                 <div key={v.name} className="flex flex-col border border-espresso/10 bg-ivory">
                   <div className="relative aspect-square w-full bg-cream">
-                    {v.image ? (
-                      <Image src={v.image} alt={v.name} fill sizes="(min-width: 1024px) 20vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
-                    ) : (
-                      <AssetPending label={`${v.name} image`} />
-                    )}
+                    <Image src={v.image} alt={v.name} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-cover" />
                   </div>
                   <div className="flex flex-1 flex-col p-4">
-                    <h3 className="font-serif text-base text-forest">{v.name}</h3>
-                    <p className="mt-1 font-sans text-xs text-espresso/70">{v.description}</p>
-                    <p className="mt-2 font-sans text-xs italic text-espresso/60">
+                    <h3 className="font-serif text-xl text-forest">
+                      <a href={v.href} className="hover:text-gold">{v.name}</a>
+                    </h3>
+                    <p className="mt-2 font-sans text-sm leading-relaxed text-espresso/75">{v.description}</p>
+                    <p className="mt-3 font-sans text-sm italic text-espresso/65">
                       {v.relationship}
                     </p>
                     <a
                       href={v.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 font-sans text-xs font-medium text-forest underline underline-offset-4"
+                      target={v.href.startsWith("http") ? "_blank" : undefined}
+                      rel={v.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                      className="mt-4 font-sans text-sm font-medium text-forest underline underline-offset-4"
                     >
-                      Visit website &rarr;
+                      {v.href_is_temporary ? "View community work" : `Visit ${v.name.replace(" Inc.", "")}`} &rarr;
                     </a>
                     {v.href_is_temporary && (
-                      <p className="mt-2 font-sans text-[11px] text-espresso/50">
-                        Temporary link pending site repair.
+                      <p className="mt-2 font-sans text-xs text-espresso/55">
+                        Official website link withheld while the domain is unavailable.
                       </p>
                     )}
                   </div>
@@ -253,6 +262,29 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="border-t border-espresso/10 bg-ivory px-6 py-16">
+          <div className="mx-auto max-w-6xl">
+            <p className="font-script text-3xl text-gold">Life with Lexi</p>
+            <h2 className="mt-2 font-serif text-3xl text-forest">
+              Notes from the life behind the work.
+            </h2>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+              {editorialNotes.map((note) => (
+                <article key={note.title} className="border-t border-gold pt-5">
+                  <p className="font-sans text-xs uppercase tracking-[0.16em] text-gold">
+                    {note.category}
+                  </p>
+                  <h3 className="mt-3 font-serif text-2xl text-forest">{note.title}</h3>
+                  <p className="mt-3 font-sans leading-relaxed text-espresso/75">{note.excerpt}</p>
+                </article>
+              ))}
+            </div>
+            <Link href="/life-with-lexi" className="mt-8 inline-block font-sans font-medium text-forest underline underline-offset-4">
+              Read Life with Lexi &rarr;
+            </Link>
+          </div>
+        </section>
+
         <section className="border-t border-espresso/10 bg-forest px-6 py-16 text-cream">
           <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-2 md:items-center">
             <h2 className="font-serif text-3xl">
@@ -270,49 +302,19 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="border-t border-espresso/10 px-6 py-16">
-          <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-2 md:items-center">
-            <div className="relative aspect-[4/5] w-full">
-              <Image
-                src="/images/family/family-portrait.jpg"
-                alt="Alexis Hughes-Williams with her family"
-                fill
-                sizes="(min-width: 768px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
+        <section className="bg-forest px-6 py-20 text-cream">
+          <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-[1fr_auto] md:items-end">
             <div>
-              <div className="relative h-24 w-24">
-                <Image
-                  src="/images/life-with-lexi/logo-official.png"
-                  alt="Life with Lexi logo"
-                  fill
-                  sizes="96px"
-                  className="object-contain"
-                />
-              </div>
-              <h2 className="mt-3 font-serif text-3xl text-forest">
-                A fuller life, on purpose.
-              </h2>
-              <p className="mt-3 font-sans text-espresso/80">
-                A look into the people, moments, and everyday joys that keep
-                this work grounded and inspired.
+              <p className="font-script text-3xl text-gold">A larger table</p>
+              <h2 className="mt-2 font-serif text-3xl md:text-4xl">Building something thoughtful?</h2>
+              <p className="mt-3 max-w-2xl font-sans text-cream/75">
+                For media, speaking, partnerships, business, or community work,
+                choose the conversation that fits.
               </p>
-              <ul className="mt-6 grid grid-cols-2 gap-4 font-sans text-sm">
-                {lifeWithLexiPillars.map((p) => (
-                  <li key={p.name}>
-                    <p className="font-medium text-forest">{p.name}</p>
-                    <p className="text-espresso/70">{p.description}</p>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/life-with-lexi"
-                className="mt-6 inline-block font-sans text-sm font-medium text-forest underline underline-offset-4"
-              >
-                Read Life with Lexi &rarr;
-              </Link>
             </div>
+            <Link href="/contact" className="inline-block bg-cream px-6 py-3 font-sans font-medium text-forest hover:bg-gold hover:text-cream">
+              Contact Alexis
+            </Link>
           </div>
         </section>
       </main>

@@ -29,6 +29,37 @@ body {
   font-family: var(--font-sans);
 }
 
+::selection {
+  background: rgba(176, 141, 79, 0.28);
+}
+
+a,
+button {
+  transition: color 180ms ease, background-color 180ms ease,
+    border-color 180ms ease, transform 180ms ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 4px;
+}
+
+.paper-texture {
+  background-image:
+    radial-gradient(circle at 12% 22%, rgba(176, 141, 79, 0.08), transparent 22rem),
+    linear-gradient(115deg, rgba(255, 255, 255, 0.5), transparent 38%);
+}
+
+.editorial-rule::before {
+  content: "";
+  display: block;
+  width: 3.5rem;
+  height: 1px;
+  margin-bottom: 1.25rem;
+  background: var(--color-gold);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

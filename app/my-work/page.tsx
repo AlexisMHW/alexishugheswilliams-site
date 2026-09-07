@@ -34,7 +34,11 @@ export default function MyWork() {
         <section className="border-t border-espresso/10 bg-forest px-6 py-16 text-cream">
           <div className="mx-auto max-w-6xl">
             <p className="font-sans text-sm text-gold">Current work</p>
-            <h2 className="mt-2 font-serif text-3xl">Place &amp; Plenty</h2>
+            <h2 className="mt-2 font-serif text-3xl">
+              <a href="https://placeandplenty.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                Place &amp; Plenty
+              </a>
+            </h2>
             <p className="mt-1 font-sans text-cream/70">
               Home Hosting. Made Simple.
             </p>
@@ -82,7 +86,9 @@ export default function MyWork() {
           <div className="mx-auto max-w-6xl">
             <p className="font-sans text-sm text-gold">Where it started</p>
             <h2 className="mt-2 font-serif text-3xl text-forest">
-              Something Sweet LLC
+              <a href="https://www.somethingsweetllc.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold">
+                Something Sweet LLC
+              </a>
             </h2>
             <p className="mt-1 font-sans text-espresso/70">
               The beginning of the hospitality story.
@@ -151,7 +157,7 @@ export default function MyWork() {
         </section>
 
         {/* Girl, unKnown / OUR, unKnown Inc. */}
-        <section className="border-t border-espresso/10 bg-ivory px-6 py-16">
+        <section id="girl-unknown" className="scroll-mt-8 border-t border-espresso/10 bg-ivory px-6 py-16">
           <div className="mx-auto max-w-6xl">
             <p className="font-sans text-sm text-gold">Community leadership</p>
             <h2 className="mt-2 font-serif text-3xl text-forest">
@@ -166,15 +172,13 @@ export default function MyWork() {
                   opportunities to grow.
                 </p>
                 <a
-                  href="https://www.girlunknown.org"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#girl-unknown"
                   className="mt-4 inline-block font-sans text-sm font-medium text-forest underline underline-offset-4"
                 >
-                  Visit Girl, unKnown &rarr;
+                  View Girl, unKnown here &rarr;
                 </a>
-                <p className="mt-2 font-sans text-xs text-espresso/50">
-                  Temporary link pending site repair.
+                <p className="mt-2 max-w-md font-sans text-xs text-espresso/55">
+                  The official website link is temporarily withheld while the domain is unavailable.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4">
@@ -226,7 +230,9 @@ export default function MyWork() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl text-forest">AR Squared Inc.</h3>
+                  <h3 className="font-serif text-xl text-forest">
+                    <a href="https://www.arsqd.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold">AR Squared Inc.</a>
+                  </h3>
                   <p className="mt-2 font-sans text-sm text-espresso/80">
                     The holding-company structure supporting my broader
                     portfolio of ventures.
@@ -240,7 +246,7 @@ export default function MyWork() {
                     rel="noopener noreferrer"
                     className="mt-3 inline-block font-sans text-sm font-medium text-forest underline underline-offset-4"
                   >
-                    Visit website &rarr;
+                    Visit AR Squared &rarr;
                   </a>
                 </div>
               </div>
@@ -257,14 +263,15 @@ export default function MyWork() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-serif text-xl text-forest">
-                    Cozy Home Services Inc.
+                    <a href="https://www.yourcozyhome.co" target="_blank" rel="noopener noreferrer" className="hover:text-gold">Cozy Home Services Inc.</a>
                   </h3>
                   <p className="mt-2 font-sans text-sm text-espresso/80">
-                    A home-services company serving real clients with real
-                    completed work.
+                    A Nashville home-services company bringing construction,
+                    function, color, design, and decor together so a house feels
+                    like home.
                   </p>
-                  <p className="mt-2 font-sans text-xs italic text-espresso/60">
-                    Co-owned with her husband, Robert Calhoun Sr.
+                  <p className="mt-2 font-sans text-sm italic text-espresso/65">
+                    I co-own Cozy Home Services Inc. with my husband, Robert Calhoun Sr.
                   </p>
                   <a
                     href="https://www.yourcozyhome.co"
@@ -272,7 +279,7 @@ export default function MyWork() {
                     rel="noopener noreferrer"
                     className="mt-3 inline-block font-sans text-sm font-medium text-forest underline underline-offset-4"
                   >
-                    Visit website &rarr;
+                    Visit Cozy Home Services &rarr;
                   </a>
                 </div>
               </div>

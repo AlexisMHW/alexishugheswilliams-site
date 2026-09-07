@@ -22,8 +22,8 @@ export default function SiteHeader() {
           Alexis Hughes-Williams
         </Link>
 
-        <ul className="hidden gap-8 font-sans text-sm text-espresso md:flex">
-          {nav.slice(1).map((item) => (
+        <ul className="hidden gap-6 font-sans text-sm text-espresso md:flex lg:gap-8">
+          {nav.map((item) => (
             <li key={item.href}>
               <Link href={item.href} className="hover:text-forest">
                 {item.label}
@@ -55,7 +55,7 @@ export default function SiteHeader() {
           id="mobile-nav"
           className="flex flex-col gap-1 border-t border-espresso/10 bg-cream px-6 py-4 font-sans text-sm md:hidden"
         >
-          {nav.slice(1).map((item) => (
+          {nav.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
